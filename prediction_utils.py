@@ -25,6 +25,19 @@ def min_max_scaling(bmi, physical_health, mental_health, sleep_time):
 
 	return scaled_bmi, scaled_physical_health, scaled_mental_health, scaled_sleep_time
 
+# def save_model():
+# 	model=SVM()
+#   classifier = SVC(kernel = 'rbf')
+
+#   df = pd.read_csv('D:\heart-disease-risk-prediction-main\Data-Set\heart_2020_cleaned.csv')
+#   Open HDF5 file in append mode
+#   with h5py.File('saved_model_lgbm.h5', 'a') as h5_file:
+
+#     # Create dataset if it doesn't exist
+#     if 'data' not in h5_file:
+#         h5_file.create_dataset('data', data=df.values)
+# 	model.save("saved_model_lgbm.h5")
+
 def load_model():
 	file = open("saved_model_lgbm.h5", "rb")
 	model = pickle.load(file) 
